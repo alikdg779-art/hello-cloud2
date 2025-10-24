@@ -28,7 +28,7 @@ HTML = """
       <p> Adını yaz, selamaını bırak</>
       <form method="POST">
         <input type="text" name="isim" placeholder="Adını yaz" required>
-        <button type="submit">Gönder</button>
+        <button> type="submit">Gönder</button>
       </form>
       <h3>Ziyaretçiler:</h3>
       <ul> 
@@ -64,7 +64,7 @@ cur.execute("SELECT isim FROM ziyaretciler ORDER BY id DESC LIMIT 10")
   return render_template_string(HTML, isimler=isimler)
 
 if__name__ =="__main__":
-  app.run(host="0.0.0.0" , port=5000)
+  app.run(host = "0.0.0.0" , port=5000)
   
 
  
