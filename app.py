@@ -15,8 +15,8 @@ HTML = """
 <head>
   <title>Buluttan selam!</titlie>
   <style>
-    bod{ font-family: Arial: text-align: center ; padding: 50px; background #eef2f3; }
-    h1{ color: #333; }
+    bod { font-family: Arial: text-align: center ; padding: 50px; background #eef2f3; }
+    h1 { color: #333; }
     form { margin: 20px auto; }
     input { padding: 10px; font-size: 16px }
     button { padding: 10px 15px; background: #4CAF50; color: white; broder: none; border-radius: 6px cursor: pointer; }
@@ -40,7 +40,7 @@ HTML = """
     </html>
     """
 
-  def connect_db():ü
+  def connect_db():
       conn = psycopg2.connecr(DATABASE_URL)
       return conn
 
