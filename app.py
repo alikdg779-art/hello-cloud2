@@ -63,7 +63,7 @@ cur.execute("SELECT isim FROM ziyaretciler ORDER BY id DESC LIMIT 10")
   return render_template_string(HTML, isimler=isimler)
 
 if __name__ == "__main__":
-  app.run(host="0.0.0.0", port=5000)
+  app.run(host = "0.0.0.0" , port=5000)
   
 
  
