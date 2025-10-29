@@ -42,8 +42,8 @@ HTML = """
     </style>
 </head>
 <body>
-    <h1>☁️ Buluttan Selam!</h1>
-    <p>Adını Yaz, selamını bırak 👇</p>
+    <h1> Buluttan Selam!</h1>
+    <p>Adını Yaz, selamını bırak </p>
 
     <form method="POST">
         <input type="text" name="isim" placeholder="Adını Yaz" required>
