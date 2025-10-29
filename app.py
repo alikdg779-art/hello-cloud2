@@ -39,22 +39,22 @@ HTML = """
     </html>
     """
 
-  def connect_db():
-      conn = psycopg2.connect(DATABASE_URL)
-      return conn
+def connect_db():
+   conn = psycopg2.connect(DATABASE_URL)
+   return conn
 
-  @app.route("/", methods=["GET", "POST"])
-  def index():
+@app.route("/", methods=["GET", "POST"])
+def index():
       conn = connect_db()
       cur = conn.cursor()
-      cur.execute("CREATE TABLE IF NOT EXISTS  ziyaretciler (id SERİAL PRIMARY KEY, isim TEXT)")
+      cur.execute("CREATE TABLE IF NOT EXISTS  ziyaretciler (id SERIAL PRIMARY KEY, isim TEXT)")
 
       if request.method == "POST":
-        isim = request.formget("isim")
+        isim = request.form.get("isim")
       if isim:
         cur.execute("INSERT INTO ziyaretciler(isim) VALUES (%s)", (isim,))
         conn.commit()
-       
+def index():    
 cur.execute("SELECT isim FROM ziyaretciler ORDER BY id DESC LIMIT 10")
   isimler = [row[0] for row in cur. fetchall()]
 
@@ -62,7 +62,7 @@ cur.execute("SELECT isim FROM ziyaretciler ORDER BY id DESC LIMIT 10")
   conn.close()
   return render_template_string(HTML, isimler=isimler)
 
-if__name__ == "__main__":
+if __name__ == "__main__":
   app.run(host = "0.0.0.0" , port=5000)
   
 
