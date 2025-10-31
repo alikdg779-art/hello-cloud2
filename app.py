@@ -4,10 +4,9 @@ import psycopg2
 
 app = Flask(__name__)
 
-# Render ortam değişkeniyle tanımlanan veritabanı URL'sini al
+
 DATABASE_URL = os.getenv("DATABASE_URL")
 
-# HTML şablonu
 HTML = """
 <!doctype html>
 <html>
