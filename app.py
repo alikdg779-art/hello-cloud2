@@ -5,7 +5,7 @@ import psycopg2
 app = Flask(__name__)
 
 
-DATABASE_URL = os.getenv("DATABASE_URL")
+DATABASE_URL = os.getenv("DATABASE_URL","postgresql://ali:DFrB3gwXmpRJ23IWhdMHNB8azepg8yGu@dpg-d54kig6uk2gs73bdfls0-a.oregon-postgres.render.com/hello_cloud2")
 
 HTML = """
 <!doctype html>
